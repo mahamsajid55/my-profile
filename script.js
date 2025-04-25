@@ -13,5 +13,3 @@
 
 }
 
-let cursor1 = document.querySelector('.cursor-1');
-let cursor2 = document.querySelector('.cursor-2');

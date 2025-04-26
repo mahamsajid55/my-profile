@@ -1,156 +1,60 @@
-:root {
-    --main-color:#e38528;
-}
-
 *{
-   font-family: 'roboto', sans-serif;
-   margin: 0; padding: 0;
-   box-sizing: border-box;
-   outline: none; border: none;
-   text-decoration: none;
-   text-transform: capitalize;
-   transition: all .2s linear;
-   line-height: 1.5;
-}
-
-html{
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-family: 'popins', sans-serif;
+    box-sizing: border-box;
 }
 
 body{
-    background: #fcf2e8;
-    padding-left: 30rem;
+    background: #080808;
+    color: #fff;
 }
 
-header{
-    position: fixed;
-    top: 0; left: 0; bottom: 0;
-    background: #222;
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url('backgrpund.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1000;
-    flex-flow: column;
-    padding: 8rem 2rem;
-    width: 30rem;
-    text-align: center;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px;
 }
 
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
 
-header .logo{
-    text-transform: uppercase;
+nav ul li  a{
     color: #fff;
-    font-size: 3rem;
-    font-weight: bolder;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
 }
 
-header .logo span{
-    text-transform: uppercase;
-    color: var(--main-color);
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
 }
-
-header .navbar a{
-     display: block;
-     font-size: 2rem;
-     color: #fff;
-      margin: 2rem 0;
+nav ul li a:hover::after{
+     width: 100%;
 }
-
-header .navbar a:hover{
-    letter-spacing: .2rem;
-    color: var(--main-color);
-}
-
-header .follow a{
-    font-size: 2.5rem;
-    color: #fff;
-    margin: 0 .7rem;
-}
-
-header .follow a:hover{
-    color: var(--main-color);
-}
-
-#menu-bars{
-  position: fixed;
-  top: 1rem; right: 1rem;
-  z-index: 10000;
-  background: var(--main-color);
-  color: #fff;
-  border-radius: 5rem;
-  padding: 1rem 1.5rem;
-  font-size: 3rem;
-  cursor: pointer;
-  display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*media queries*/
-@media (max-width:991px){
-
-    html{
-      font-size: 55%;
-    }
-
-    body{
-        padding: 0;
-    }
-
-     #mrnu-bars{
-        display: initial;
-     }
-
-     header{
-        left: -120%;
-     }
-
-     header.active{
-        left: 0%;
-     }
-}
-
-
-@media (max-width:450px){
-     html{
-        font-size: 50%;
-     }
-
-     header{
-        width: 100%;
-     }
-}
-
-
-
-
-
-
-
-

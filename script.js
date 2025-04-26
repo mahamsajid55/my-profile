@@ -1,15 +1,15 @@
- let menu = document.querySelector('#menu-bars');
- let header = document.querySelector('#header');
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
 
- menu.onclick = () =>{
-    menu.classList.toggle('fa-times');
-    header.classList.toggle('active');
+function opentab(tabname, event) {
+   for (let tablink of tablinks) {
+        tablink.classList.remove('active-link');
+   }
 
- }
+   for (let tabcontent of tabcontents) {
+      tabcontent.classList.remove('active-tab');
+   }
 
- window.onscroll = () =>{
-    menu.classList.remove('fa-times');
-    header.classList.remove('active');
-
+   event.currentTarget.classList.add("active-link");
+   document.getElementById(tabname).classList.add("active-tab");
 }
-

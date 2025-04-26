@@ -1,50 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
-        <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/628301411f.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
   <div id="header">
-        <div class="container">
-         <nav>
-          <img src="#" class="logo">
-          <ul>
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Service">Service</a></li>
-            <li><a href="#Profile">Profile</a></li>
-            <li><a href="#Contact">Contact</a></li>
+    <div class="container">
+      <nav>
+        <img src="#" class="logo" alt="Logo">
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Service">Service</a></li>
+          <li><a href="#Profile">Profile</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
 
-          </ul>
-         </nav>
-          
-
-
-
-        </div>
+      <div class="header-text">
+        <p>UI/UX Designer</p>
+        <h1>Hi, I'm <span>Maham</span><br> Sajid From Spain</h1>
+      </div>
+    </div>
   </div>
 
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        
+        <div class="about-col-1">
+          <img src="Maham.jpeg" alt="Maham's Photo">
+        </div>
+
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            I'm a front-end developer who is passionate about crafting high-quality, responsive websites and applications. 
+            With a solid grasp of modern web technologies, I make sure that every project is not just visually stunning but also performs well and is user-friendly. 
+            My goal is to create solutions that meet business needs while ensuring an intuitive and smooth user experience.
+          </p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+            <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+            <p class="tab-links" onclick="opentab('education', event)">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>UI/UX</span><br>Creating engaging Web/App interfaces</li>
+              <li><span>Web Development</span><br>Developing dynamic web applications</li>
+              <li><span>App Development</span><br>Crafting Android/iOS applications</li>
+            </ul>
+          </div>
+          
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>UI/UX</span><br>Creating engaging Web/App interfaces</li>
+              <li><span>Web Development</span><br>Developing dynamic web applications</li>
+              <li><span>App Development</span><br>Crafting Android/iOS applications</li>
+            </ul>
+          </div>
+          
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2016</span><br>Studied UI/UX for Web/App interfaces</li>
+              <li><span>Web Development</span><br>Developing dynamic web applications</li>
+              <li><span>App Development</span><br>Crafting Android/iOS applications</li>
+            </ul>
+          </div>
+        </div>
+          </div>
+          </div> 
+          </div>
 
 
+<!--SERVICE SECTION-->
+  <div id="Service">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web design</h2>
+            <p>Creating visually appealing and user-friendly websites.</p>
+            <a href="#">Read More</a>
+          </div>
 
+          <div>
+            <i class="fa-solid fa-crop-simple"></i>
+            <h2>UI/UX Design</h2>
+            <p>Creating visually appealing and user-friendly websites.</p>
+            <a href="#">Read More</a>
+          </div>
 
+          <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>App Design</h2>
+            <p>Creating visually appealing and user-friendly websites.</p>
+            <a href="#">Read More</a>
+          </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="script.js"></script>
-</body>
-</html>
+        </div>
+    </div>
+  </div>
+          
+          <script src="script.js"></script>
+          </body>
+          </html>

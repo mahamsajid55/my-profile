@@ -12,14 +12,36 @@ body{
     background: #080808;
     color: #fff;
 }
+.logo {
+    width: 140px;  
+    height: auto; 
+    object-fit: contain;  
+    border-radius: 50%;
+    transition: transform 0.3s ease; 
+  }
+  
+  .logo:hover {
+    transform: scale(1.1); /* Grows slightly on hover */
+  }
+  
 
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url('backgrpund.png');
     background-size: cover;
     background-position: center;
 }
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.5;
+    pointer-events: none;
+  }
 
 .container{
     padding: 10px 10%;
@@ -61,7 +83,50 @@ nav ul li a::after{
 nav ul li a:hover::after{
      width: 100%;
 }
+.fa-bars {
+    display: none;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+  }
 
+  .fa-xmark {
+    display: none;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -200px;
+      width: 200px;
+      height: 100vh;
+      background: #ff004f;
+      padding-top: 60px;
+      transition: right 0.5s;
+      z-index: 1002;
+    }
+
+    nav ul li {
+      margin: 20px;
+    }
+
+    .fa-bars {
+      display: block;
+      z-index: 1003;
+    }
+
+    nav ul .fa-xmark {
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+  }
 .header-text{
      margin-top: 20%;
      font-size: 30px;

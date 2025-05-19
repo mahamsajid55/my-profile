@@ -161,7 +161,7 @@
         </div>
 
         <div class="contact-right">
-          <form>
+          <form name="submit-to-google-sheet">
             <input type="text" name="Name" placeholder="Your Name" required>
             <input type="email" name="Email" placeholder="Your Email" required>
             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
@@ -178,5 +178,16 @@
 
   <script src="script.js"></script>
 
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzgnjD9Ty5mFxNsVzVRotc5aO3A_tJdLtO3Gc49dm7JjT4vQnYDczJNpjd32Rv_K_LbFA/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
